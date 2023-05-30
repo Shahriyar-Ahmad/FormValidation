@@ -1,49 +1,52 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Validation - Easy Tutorials YouTube Channel</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/355a392082.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation - Easy Tutorials YouTube Channel</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/355a392082.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
   <div class="container">
     <form>
       <i class="fas fa-paper-plane"></i>
-
+      <!-- Name Input  Field-->
       <div class="input-group">
         <label>Full Name</label>
         <input type="text" placeholder="Enter your name" id="fullname" onkeyup="nameValidate()">
         <span id="name-erore"> </span>
 
       </div>
-
+      <!-- Phone No Input Field -->
       <div class="input-group">
         <label>Phone No.</label>
         <input type="tel" placeholder="03144992183" id="phone-no" onkeyup="phoneValidate()">
         <span id="phone-erore"></span>
       </div>
-
+      <!-- Email Input Field -->
       <div class="input-group">
         <label>Email Id</label>
         <input type="email" placeholder="Enter Email" id="email-no" onkeyup="emailValidate()" required>
         <span id="email-erore"></span>
-      </div>   
-
+      </div>
+      <!-- Message Field -->
       <div class="input-group">
         <label>Your Message</label>
         <textarea rows="2" placeholder="Enter your message" id="messeage" onkeyup="messeageValidate()"></textarea>
         <span id="messege-erore"></span>
       </div>
+      <!-- Submit Btn -->
+      <button onclick="return formValidate()">Submit</button>
+      <span id="submit-erore"></span>
+    </form>
 
-    <button onclick="return formValidate()">Submit</button>
-    <span id="submit-erore"></span>
-  </form>
 
 
 
-  
   </div>
-   <script src="fv.js"></script>
+  <script src="fv.js"></script>
 </body>
+
 </html>

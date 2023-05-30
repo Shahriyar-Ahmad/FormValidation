@@ -1,8 +1,10 @@
+// All Error Span In Variable
 var ne = document.getElementById("name-erore");
 var pe = document.getElementById("phone-erore");
 var ee = document.getElementById("email-erore");
 var me = document.getElementById("messege-erore");
 var se = document.getElementById("submit-erore");
+// Name Validation
 function nameValidate() {
     var name = document.getElementById("fullname").value;
     if (name.lenght == 0) {
@@ -16,6 +18,7 @@ function nameValidate() {
     ne.innerHTML = "<i class='fa-sharp fa-solid fa-circle-check'></i>";
     return true;
 }
+// Phone No Validation
 function phoneValidate() {
     var phone = document.getElementById("phone-no").value;
     if (phone.lenght == 0) {
@@ -33,6 +36,7 @@ function phoneValidate() {
     pe.innerHTML = "<i class='fa-sharp fa-solid fa-circle-check'></i>";
     return true;
 }
+// Email Validation
 function emailValidate() {
     var email = document.getElementById("email-no").value;
     if (email.length == 0) {
@@ -46,18 +50,20 @@ function emailValidate() {
     ee.innerHTML = "<i class='fa-sharp fa-solid fa-circle-check'></i>";
     return true;
 }
+// Messeage Validation
 function messeageValidate() {
     var messge = document.getElementById("messeage").value;
 
     var required = 30;
     var left = required - messge.length;
     if (left < 0) {
-        me.innerHTML = "Charactor Above the Limit." ;
+        me.innerHTML = "Charactor Above the Limit.";
         return false;
     }
     me.innerHTML = "<i class='fa-sharp fa-solid fa-circle-check'></i>";
     return true;
 }
+// Form Submit Validation
 function formValidate() {
     if (!nameValidate() || !phoneValidate() || !messeageValidate() || !emailValidate) {
         se.innerHTML = "Plz fix the erorr."
