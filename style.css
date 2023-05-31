@@ -1,11 +1,12 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
 /* Cotainer CSS */
-.container{
+.container {
     width: 100%;
     height: 100vh;
     background: rgb(16, 133, 94);
@@ -15,19 +16,21 @@
 }
 
 
-.useful-links{
+.useful-links {
     position: absolute;
     top: 5%;
     right: 5%;
 
 }
-.useful-links a{
+
+.useful-links a {
     display: block;
     color: #fff;
     text-decoration: none;
 }
+
 /* Fom CSS */
-.container form{
+.container form {
     width: 90%;
     max-width: 500px;
     padding: 50px 30px 20px;
@@ -36,17 +39,19 @@
     position: relative;
     transition: .5s ease-in-out;
 }
-form:hover{
-    box-shadow: 3px 8px 10px 3px rgba(241, 248, 242, 0.545);
+
+form:hover {
+    box-shadow: 3px 6px 8px 3px rgba(241, 248, 242, 0.445);
     cursor: pointer;
     transform: scale(1.01);
 }
+
 /* Form Logo CSS */
-.fa-paper-plane{
+.fa-paper-plane {
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     background: #fff;
     font-size: 26px;
     color: rgb(16, 133, 94);
@@ -54,18 +59,22 @@ form:hover{
     border-radius: 50%;
     box-shadow: 0 0 10px rgb(0, 0, 0, 0.5);
 }
+
 /* All Input Field CSS */
-.input-group{
+.input-group {
     width: 100%;
     display: flex;
     align-items: center;
     margin: 10px 0;
     position: relative;
 }
-.input-group label{
+
+.input-group label {
     flex-basis: 28%;
 }
-.input-group input, .input-group textarea{
+
+.input-group input,
+.input-group textarea {
     flex-basis: 68%;
     background: transparent;
     border: 0;
@@ -75,12 +84,14 @@ form:hover{
     color: #333;
     font-size: 16px;
 }
-::placeholder{
+
+::placeholder {
     font-size: 14px;
 }
+
 /* Submt btn CSS */
-form button{
-    background:rgb(16, 133, 94);
+form button {
+    background: rgb(16, 133, 94);
     color: #fff;
     border-radius: 4px;
     border: 1px solid rgba(255, 255, 255, 0.7);
@@ -90,24 +101,75 @@ form button{
     display: block;
     margin: 30px auto 10px;
 }
+
 /* Error CSS */
-.input-group span{
+.input-group span {
     position: absolute;
     bottom: 12px;
     right: 17px;
     font-size: 14px;
-    color:red;
-   
+    color: red;
+
 
 }
-#submit-erore{
-    
+
+#submit-erore {
+
     font-size: 14px;
-    color:red;
- 
-}
-.input-group span i{
-    color: green;
-    
+    color: red;
+
 }
 
+.input-group span i {
+    color: green;
+
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 550px) {
+    ::placeholder {
+        font-size: .6rem;
+    }
+
+    /* Label Responsiveness */
+    .input-group label {
+        flex-basis: 38%;
+        font-size: .8rem;
+    }
+
+    /* Input and textarea Responsive */
+    .input-group input,
+    .input-group textarea {
+        flex-basis: 58%;
+        font-size: .8rem;
+    }
+
+    /* Btn Responsive */
+    form button {
+        padding: .3rem 1.5rem;
+        margin: 1rem auto .4rem;
+        display: block;
+        font-size: .7rem;
+        text-align: center;
+    }
+
+    /* Error Ressponsive */
+    .input-group span {
+        font-size: .4rem;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    /* Submit */
+    #submit-erore {
+
+        font-size: 0.5rem;
+        color: red;
+    }
+  
+    .input-group span i {
+        color: green;
+        font-size: .6rem;
+    }
+}
